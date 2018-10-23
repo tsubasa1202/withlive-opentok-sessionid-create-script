@@ -9,7 +9,16 @@ use OpenTok\Role;
 
 const OPENTOK_APIKEY =  '46181832';
 const OPENTOK_APISECRET = 'b41bcef01494d3109bf1edeacb9e6a9101023faa';
-echo getOpenTokSessionId(); 
+
+$fp = fopen("result.txt", "a");
+
+const NUMBER = 180;
+for ($i=0; $i < NUMBER ; $i++) { 
+	$session_id = getOpenTokSessionId();
+	fwrite($fp, "$session_id\n" );
+}
+// $session_id = getOpenTokSessionId(); 
+
 
     function getOpenTokSessionId(){
         $apiKey = OPENTOK_APIKEY;
