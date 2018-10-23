@@ -1,0 +1,7 @@
+{
+  "name": "helloworld-php",
+  "minimum-stability":"dev",
+  "require": {
+  	"opentok/opentok": "4.1.x"
+  }
+}
