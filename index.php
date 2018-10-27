@@ -12,8 +12,9 @@ const OPENTOK_APISECRET = 'b41bcef01494d3109bf1edeacb9e6a9101023faa';
 
 $fp = fopen("result.txt", "a");
 
-const NUMBER = 180;
-for ($i=0; $i < NUMBER ; $i++) { 
+$NUMBER = $argv[1];
+echo 'number is : ' . $NUMBER . "\n";
+for ($i=0; $i < $NUMBER ; $i++) { 
 	$session_id = getOpenTokSessionId();
 	fwrite($fp, "$session_id\n" );
 }
@@ -37,9 +38,11 @@ for ($i=0; $i < NUMBER ; $i++) {
 
             // セッションIDを取得
             $sessionId = $session->getSessionId();
+            echo  $sessionId . "\n";
 
             return $sessionId;
         }catch(\Exception $e){
+            echo  $e;
             throw $e;
         }
 
