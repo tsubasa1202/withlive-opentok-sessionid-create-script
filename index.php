@@ -38,7 +38,7 @@ for ($i=0; $i < $NUMBER ; $i++) {
 
             // セッションIDを取得
             $sessionId = $session->getSessionId();
-            echo  $sessionId . "\n";
+            // echo  $sessionId . "\n";
 
             return $sessionId;
         }catch(\Exception $e){
