@@ -1,8 +1,5 @@
 #!/bin/bash
 
-php index.php 318 &&
-mv result.txt session_id_20190302.txt &&
-
 php index.php 120 &&
 mv result.txt session_id_20190304.txt &&
 
